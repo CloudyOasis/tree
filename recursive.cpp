@@ -97,6 +97,7 @@ constexpr std::size_t RecursionInfo::depthOr(std::size_t value) const
 	return value; 
 }
 
+[[nodiscard("This creates a copy without modifying the original object.")]]
 constexpr RecursionInfo RecursionInfo::getNextLayer() const
 {
 	return RecursionInfo(*this).reduceDepth(1);

@@ -12,7 +12,7 @@
  */
 template <typename Comparator = std::less<> >
 std::vector<fs::directory_entry> ls
-[[nodiscard]] // ls-ing might be slow depending on the system and directory
+[[nodiscard("ls-ing might be slow depending on the system and directory.")]]
 (
 	fs::path const& path,
 	Comparator compare = Comparator {}
