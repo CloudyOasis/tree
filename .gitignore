@@ -1,5 +1,9 @@
 # Manual additions
 
+# Ignore VS Code files except the build task (temporary, until a makefile is created).
+.vscode/*
+!.vscode/tasks.json
+
 # Executable file
 tree
 
